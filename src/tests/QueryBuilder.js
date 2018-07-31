@@ -1,7 +1,7 @@
 import QueryBuilder from "../fluent/QueryBuilder";
 import assert from "assert";
 
-exports["QueryBuilder: Simple AST."] = () => {
+exports["QueryBuilder"] = () => {
 
     const builder = new QueryBuilder();
     builder.isProperty("firstName")
