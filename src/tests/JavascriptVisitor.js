@@ -15,4 +15,6 @@ exports["JavascrptVisitor: Simple"] = () => {
     const array = [{firstName: "Jared"}, {firstName: "John"}];
     const results = array.filter(filter);
 
+    assert.equal(results.length, 1);
+    assert.equal(results[0].firstName, "John");
 }
