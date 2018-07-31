@@ -3,7 +3,8 @@ import OperationBuilder from "./OperationBuilder";
 
 export default class QueryBuilder {
 
-    constructor() {
+    constructor(type) {
+        this.type = type;
         this.rootNode = null;
         this.factory = new QueryFactory();
     }

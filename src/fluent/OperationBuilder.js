@@ -16,7 +16,7 @@ export default class OperationBuilder {
     contains(value) {
         const node = this.factory.createContainsNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
@@ -27,7 +27,7 @@ export default class OperationBuilder {
     equalTo(value) {
         const node = this.factory.createIsEqualToNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
@@ -38,7 +38,7 @@ export default class OperationBuilder {
     notEqualTo(value) {
         const node = this.factory.createIsNotEqualToNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
@@ -49,7 +49,7 @@ export default class OperationBuilder {
     greaterThan(value) {
         const node = this.factory.createIsGreaterThanNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
@@ -60,7 +60,7 @@ export default class OperationBuilder {
     greaterThanOrEqualTo(value) {
         const node = this.factory.createIsGreaterThanOrEqualToNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
@@ -71,7 +71,7 @@ export default class OperationBuilder {
     lessThan(value) {
         const node = this.factory.createIsLessThanNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
@@ -82,7 +82,7 @@ export default class OperationBuilder {
     lessThanOrEqualTo(value) {
         const node = this.factory.createIsLessThanOrEqualToNode();
         const valueNode = this.factory.createValueNode(value);
-        const propertyNode = this.factory.createPropertyNode(valueNode.type, this.propertyName);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
 
         node.children.push(propertyNode, valueNode);
         this.rootNode.children.push(node);
