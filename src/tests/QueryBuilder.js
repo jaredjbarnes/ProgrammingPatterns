@@ -1,5 +1,4 @@
 import QueryBuilder from "../fluent/QueryBuilder";
-import assert from "assert";
 
 exports["QueryBuilder"] = () => {
 
