@@ -1,5 +1,5 @@
 import JavascriptVisitor from "../visitor/JavascriptVisitor";
-import QueryBuilder from "../fluent/QueryBuilder";
+import QueryBuilder from "../builder/QueryBuilder";
 import assert from "assert";
 
 exports["JavascrptVisitor: Simple"] = () => {

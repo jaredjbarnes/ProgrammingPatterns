@@ -1,4 +1,4 @@
-import QueryBuilder from "../fluent/QueryBuilder";
+import QueryBuilder from "../builder/QueryBuilder";
 
 exports["QueryBuilder"] = () => {
 
