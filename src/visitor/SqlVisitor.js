@@ -9,6 +9,14 @@ export default class SqlVisitor extends Visitor {
         return `(${args.join(" OR ")})`;
     }
 
+    endsWith(property, value){
+        return `${property} LIKE %${value}`; 
+    }
+
+    startsWith(property, value){
+        return `${property} LIKE ${value}%`; 
+    }
+
     contains(property, value) {
         return `${property} LIKE %${value}%`;
     }

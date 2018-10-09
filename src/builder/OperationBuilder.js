@@ -13,6 +13,28 @@ export default class OperationBuilder {
         return this.rootNode;
     }
 
+    endsWith(value) {
+        const node = this.factory.createEndsWithNode();
+        const valueNode = this.factory.createValueNode(value);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
+
+        node.children.push(propertyNode, valueNode);
+        this.rootNode.children.push(node);
+
+        return this.queryBuilder;
+    }
+
+    startsWith(value) {
+        const node = this.factory.createStartsWithNode();
+        const valueNode = this.factory.createValueNode(value);
+        const propertyNode = this.factory.createPropertyNode(this.queryBuilder.type, this.propertyName);
+
+        node.children.push(propertyNode, valueNode);
+        this.rootNode.children.push(node);
+
+        return this.queryBuilder;
+    }
+
     contains(value) {
         const node = this.factory.createContainsNode();
         const valueNode = this.factory.createValueNode(value);

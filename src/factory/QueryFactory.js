@@ -16,6 +16,14 @@ export default class QueryFactory {
         return new CompositeNode("contains");
     }
 
+    createEndsWithNode(){
+        return new CompositeNode("endsWith");
+    }
+
+    createStartsWithNode(){
+        return new CompositeNode("startsWith");
+    }
+
     createIsEqualToNode() {
         return new CompositeNode("isEqualTo");
     }
